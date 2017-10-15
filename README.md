@@ -67,7 +67,7 @@ func printOrWrite(args *selpgargs, line string, stdin io.WriteCloser) {}
 
 ## Test examples
 
-####安装Go语言环境，然后将bin目录添加到路径下面，通过go get安装selpg。如果环境变量中已经设置过GOBIN，可以在系统其他位置执行selpg。
+#### 安装Go语言环境，然后将bin目录添加到路径下面，通过go get安装selpg。如果环境变量中已经设置过GOBIN，可以在系统其他位置执行selpg。
 
 
 ### 1.help
