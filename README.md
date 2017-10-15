@@ -1,4 +1,4 @@
-#Selpg
+Selpg
 
 >Selpg is a utility that selects page range from text input. The input can come from the file specified as the last command line parameter, and can also be from standard input when no file name argument is given. selpg first handles all command line arguments. After scanning all the option parameters (that is, those with a hyphen), if selpg finds a parameter, it will accept the parameter as the name of the input file and try to open it for reading. If there are no other parameters, selpg assumes that the input comes from standard input.
 
@@ -11,7 +11,7 @@
 3.[Using Python to create UNIX command line tools](https://www.ibm.com/developerworks/aix/library/au-pythocli/index.html)
 
 
-##design process
+design process
 
 导入所需包
 ```go
