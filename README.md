@@ -113,7 +113,7 @@ There is a text file named `test` and the content is 135 lines tests:
  test135
 ```
 Then here are some commands to test the selpg.
-1.
+1.以每页15行选择第一页输出
 
     $ selpg -s 1 -e 1  -l 15 test
     test16
@@ -132,7 +132,7 @@ Then here are some commands to test the selpg.
     test29
     test30
 
-2.
+2.以每页6行选择2-3页输出
 
     $ selpg -s=2 -e=3 -l 6 test
     test13
@@ -147,7 +147,7 @@ Then here are some commands to test the selpg.
     test22
     test23
     test24
-3.
+3.读它的标准输入，不过 shell／内核已将其重定向，所以标准输入来自test
 
     $ selpg -s=1 -e=1 -l 10 < test
     test11
@@ -161,7 +161,7 @@ Then here are some commands to test the selpg.
     test19
     test20
 
-4.
+4.cat test的标准输出被 shell／内核重定向至 selpg 的标准输入,将第2页到第3页写至 selpg 的标准输出（屏幕）
 
     $ cat test | selpg -s 2 -e 3 -l 10
     test21
@@ -185,7 +185,7 @@ Then here are some commands to test the selpg.
     test39
     test40
 
-5.
+5.仍然写至它的标准输出，不过 shell／内核将其重定向，所以输出写至output
 
     $ selpg -s 2 -e 3 -l 10 test >output
     test21
@@ -209,7 +209,7 @@ Then here are some commands to test the selpg.
     test39
     test40
 
-6.
+6.错误命令示例,正常输出在屏幕显示，错误消息被写至error
 
     $ selpg -s 2 -e 0 -l 5 test
     Invalid arguments
@@ -232,9 +232,9 @@ Then here are some commands to test the selpg.
     If no file specified, selpg will read input from stdin. Control-D to end.
   
 
-7.
+7.测试按默认每页行数输出
 
-    $ selpg -s 0 -e 0 test (测试默认行数输出)
+    $ selpg -s 0 -e 0 test 
     test1
     test2
     test3
@@ -254,7 +254,7 @@ Then here are some commands to test the selpg.
     test70
     test71
     test72
-8.
+8.该命令将选定的页作为打印作业发送至 lp1 打印目的地
 
     selpg -s 0 -e 1 -l 5 -d=lp1 test
     1  test1
