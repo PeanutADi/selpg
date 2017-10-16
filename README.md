@@ -113,6 +113,7 @@ There is a text file named `test` and the content is 135 lines tests:
  test135
 ```
 Then here are some commands to test the selpg.
+
 1.以每页15行选择第一页输出
 
     $ selpg -s 1 -e 1  -l 15 test
@@ -254,7 +255,7 @@ Then here are some commands to test the selpg.
     test70
     test71
     test72
-8.该命令将选定的页作为打印作业发送至 lp1 打印目的地
+8.第0页到第1页由管道输送至命令“lp -dlp1”，该命令将使输出在打印机 lp1 上打印
 
     selpg -s 0 -e 1 -l 5 -d=lp1 test
     1  test1
